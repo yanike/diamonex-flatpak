@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>io.github.yanike.diamonex-flatpak</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>LicenseRef-proprietary=https://github.com/yanike/diamonex-flatpak/blob/main/LICENSE.txt</project_license>
+  <name>Diamonex</name>
+  <summary>AI cloud client for Linux</summary>
+  <description>
+    <p>
+      Diamonex is a Linux desktop client for Gemini Cloud workflows with local
+      project context, attachments, command execution, and chat history.
+    </p>
+  </description>
+  <launchable type="desktop-id">io.github.yanike.diamonex-flatpak.desktop</launchable>
+  <developer id="io.github.yanike">
+    <name>Yanike Mann</name>
+  </developer>
+  <url type="homepage">https://github.com/yanike/diamonex-flatpak</url>
+  <url type="bugtracker">https://github.com/yanike/diamonex-flatpak/issues</url>
+  <content_rating type="oars-1.1" />
+  <releases>
+    <release version="0.1.0" date="2026-05-30">
+      <description>
+        <p>Initial Flatpak packaging for Diamonex.</p>
+      </description>
+    </release>
+  </releases>
+</component>

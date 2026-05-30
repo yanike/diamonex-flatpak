@@ -1,0 +1,22 @@
+#!/bin/sh
+set -eu
+
+export TMPDIR="${XDG_RUNTIME_DIR}/app/${FLATPAK_ID}"
+mkdir -p "$TMPDIR"
+
+unset ELECTRON_RUN_AS_NODE
+unset ELECTRON_NO_ATTACH_CONSOLE
+unset GDK_PIXBUF_MODULEDIR
+unset GDK_PIXBUF_MODULE_FILE
+unset GIO_LAUNCHED_DESKTOP_FILE
+unset GIO_LAUNCHED_DESKTOP_FILE_PID
+unset GIO_MODULE_DIR
+unset GTK_EXE_PREFIX
+unset GTK_IM_MODULE_FILE
+unset GTK_PATH
+
+if [ -n "${WAYLAND_DISPLAY:-}" ]; then
+  exec /app/extra/electron/electron --no-sandbox --enable-features=UseOzonePlatform --ozone-platform=wayland /app/extra/diamonex "$@"
+fi
+
+exec /app/extra/electron/electron --no-sandbox /app/extra/diamonex "$@"

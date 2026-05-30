@@ -1,0 +1,57 @@
+app-id: io.github.yanike.diamonex-flatpak
+runtime: org.freedesktop.Platform
+runtime-version: '25.08'
+sdk: org.freedesktop.Sdk
+command: diamonex
+base: org.electronjs.Electron2.BaseApp
+base-version: '25.08'
+
+finish-args:
+  - --share=ipc
+  - --share=network
+  - --socket=fallback-x11
+  - --socket=wayland
+  - --socket=pulseaudio
+  - --device=dri
+  - --filesystem=home
+  - --talk-name=org.freedesktop.Flatpak
+
+modules:
+  - name: diamonex
+    buildsystem: simple
+    build-commands:
+      - install -Dm755 apply_extra /app/bin/apply_extra
+      - install -Dm755 diamonex /app/bin/diamonex
+      - install -Dm644 io.github.yanike.diamonex-flatpak.desktop /app/share/applications/io.github.yanike.diamonex-flatpak.desktop
+      - install -Dm644 io.github.yanike.diamonex-flatpak.metainfo.xml /app/share/metainfo/io.github.yanike.diamonex-flatpak.metainfo.xml
+      - install -Dm644 logo.png /app/share/icons/hicolor/256x256/apps/io.github.yanike.diamonex-flatpak.png
+      - install -Dm644 logo-128.png /app/share/icons/hicolor/128x128/apps/io.github.yanike.diamonex-flatpak.png
+      - install -Dm644 logo-80.png /app/share/icons/hicolor/80x80/apps/io.github.yanike.diamonex-flatpak.png
+      - install -Dm644 logo-36.png /app/share/icons/hicolor/36x36/apps/io.github.yanike.diamonex-flatpak.png
+      - install -Dm644 LICENSE.txt /app/share/licenses/io.github.yanike.diamonex-flatpak/LICENSE.txt
+    sources:
+      - type: file
+        path: build-aux/flatpak/apply_extra
+      - type: file
+        path: build-aux/flatpak/diamonex
+      - type: file
+        path: build-aux/flatpak/io.github.yanike.diamonex-flatpak.desktop
+      - type: file
+        path: build-aux/flatpak/io.github.yanike.diamonex-flatpak.metainfo.xml
+      - type: file
+        path: assets/logo.png
+      - type: file
+        path: assets/logo-128.png
+      - type: file
+        path: assets/logo-80.png
+      - type: file
+        path: assets/logo-36.png
+      - type: file
+        path: LICENSE.txt
+      - type: extra-data
+        filename: diamonex-0.1.0-x86_64.tar.gz
+        only-arches:
+          - x86_64
+        url: https://github.com/yanike/diamonex-flatpak/releases/download/v0.1.0/diamonex-0.1.0-x86_64.tar.gz
+        sha256: 2bfc774e087600ef569923321d2aaefef78d554f3ecd1eaae8803856992b451f
+        size: 114223560

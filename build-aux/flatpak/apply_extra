@@ -1,0 +1,6 @@
+#!/bin/sh
+set -eu
+
+tar -xzf diamonex-0.1.0-x86_64.tar.gz
+rm -f diamonex-0.1.0-x86_64.tar.gz
+chmod -R a-s,go+rX,go-w diamonex electron

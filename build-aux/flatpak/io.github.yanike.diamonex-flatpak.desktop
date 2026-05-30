@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Diamonex
+Comment=AI cloud client for Linux
+Exec=diamonex
+Icon=io.github.yanike.diamonex-flatpak
+Terminal=false
+Categories=Development;
+StartupNotify=true
