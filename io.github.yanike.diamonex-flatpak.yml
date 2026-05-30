@@ -13,8 +13,6 @@ finish-args:
   - --socket=wayland
   - --socket=pulseaudio
   - --device=dri
-  - --filesystem=home
-  - --talk-name=org.freedesktop.Flatpak
 
 modules:
   - name: diamonex
