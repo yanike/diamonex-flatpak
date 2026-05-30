@@ -18,6 +18,32 @@
   <url type="homepage">https://github.com/yanike/diamonex-flatpak</url>
   <url type="bugtracker">https://github.com/yanike/diamonex-flatpak/issues</url>
   <content_rating type="oars-1.1" />
+  <screenshots>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/yanike/diamonex-flatpak/edd6138e6e27b284c580493f4f33416bb17fe7e1/screenshots/diamonex-main.png</image>
+      <caption>Main Diamonex workspace</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/yanike/diamonex-flatpak/edd6138e6e27b284c580493f4f33416bb17fe7e1/screenshots/diamonex-chat.png</image>
+      <caption>Chat with Gemini</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/yanike/diamonex-flatpak/edd6138e6e27b284c580493f4f33416bb17fe7e1/screenshots/diamonex-project.png</image>
+      <caption>Project context and file changes</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/yanike/diamonex-flatpak/edd6138e6e27b284c580493f4f33416bb17fe7e1/screenshots/diamonex-attachments.png</image>
+      <caption>Attachments in a conversation</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/yanike/diamonex-flatpak/edd6138e6e27b284c580493f4f33416bb17fe7e1/screenshots/diamonex-command.png</image>
+      <caption>Command review before running local tools</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/yanike/diamonex-flatpak/edd6138e6e27b284c580493f4f33416bb17fe7e1/screenshots/diamonex-history.png</image>
+      <caption>Local chat history</caption>
+    </screenshot>
+  </screenshots>
   <releases>
     <release version="0.1.0" date="2026-05-30">
       <description>
